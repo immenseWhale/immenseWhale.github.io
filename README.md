@@ -1,2 +1,1 @@
-# immenseWhale.github.io
-readme page
+# GaeulLee.github.io
