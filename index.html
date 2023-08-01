@@ -447,19 +447,20 @@
 																	</li>
 																</ul>
 															</li>
-															<li><span class="b-title">학생 시험 조회 및 답안 등록</span>
+															<li><span class="b-title">﻿해시태그 생성과 GROUP_CONCAT을 활용한 출력</span>
 																<ul>
-																	<li><span class="s-title">두 개의 리스트를 이중 반복문을 통해 출력 </span>
-																		<div>- 문제리스트와 보기리스트를 각각 가져와 반복문을 통해 시험지를 구현했습니다.</div>
-																		<div>- 답안을 등록하는 테이블인paper에 데이터가 있는지 확인 후, 시험을 이미 응시한 학생은 점수 확인 페이지로 이동하도록 구현했습니다.</div>
+																	<li><span class="s-title">﻿memo에서 #를 붙인 단어는 해시태그화</span>
+																		<div>- ﻿memo 입력 성공시 해시태그가 있는지 살피고, 해시태그가 있는 경우 해시태그에서 띄어쓰기까지 #을 떼고 태그로 저장</div>
+																	</li>
+																	<li><span class="s-title">﻿﻿group_concat 사용</span>
+																		<div>- ﻿﻿group_concat을 사용하여 해시태그와 가계부의 LEFT JOIN을 깔끔하게 출력합니다.</div>
 																	</li>
 																</ul>
 															</li>
-															<li><span class="b-title">학생 점수 확인</span>
+															<li><span class="b-title">﻿차트 API 활용</span>
 																<ul>
-																	<li><span class="s-title">응시한 시험의 정답과 오답을 통해 점수 계산 </span>
-																		<div>- 문제리스트와 보기리스트를 각각 가져와 반복문을 통해  페이지를 구현했습니다.</div>
-																		<div>- 정답과 오답을 반복문으로 비교하여 점수가 계산 되도록 구현했습니다.</div>
+																	<li><span class="s-title">﻿차트 출력</span>
+																		<div>- ﻿사용자가 쓴 이 달의 해시태그의 비율이 어떻게 되는지 도넛 차트로 나타냅니다.</div>
 																	</li>
 																</ul>
 															</li>
@@ -472,18 +473,17 @@
 												<tr>
 													<td colspan="2">
 														<span>Language</span> HTML5, CSS3, Java, SQL, JavaScript, Ajax<br>
-														<span>Framework</span> SpringBoot<br>
-														<span>Library</span> JSTL, JQuery, Lombok, MyBatis, Maven, BootStrap<br>
+														<span>Library</span> JSTL, JQuery, BootStrap5<br>
 														<span>Database</span> MariaDB<br>
 														<span>WAS</span> Apache Tomcat9<br>
 														<span>OS</span> window11<br>
-														<span>TOOL</span> Spring-Tool-Suite4, HeidiSQL
+														<span>TOOL</span> HeidiSQL, Git
 													</td>
 												</tr>
 											</table>
 											<div style="text-align: end;">
-												<a href="./images/2-online-test-erd.png" target="_blank" class="btn btn-primary">ERD</a>
-												<a href="https://github.com/GaeulLee/online-test" target="_blank" class="btn btn-primary">Github</a>
+												<a href="./images/cashERD.png" target="_blank" class="btn btn-primary">ERD</a>
+												<a href="https://github.com/immenseWhale/cash.git" target="_blank" class="btn btn-primary">Github</a>
 											</div>
 										</div>
 									</div>
