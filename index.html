@@ -266,7 +266,7 @@
 						<div class="item">
 							<div class="col-md-12">
 								<div class="article" id="p1">
-									<a href="" target="_blank" class="blog-img">
+									<a href="" target="http://15.164.19.8/login" class="blog-img">
 										<img class="img-responsive" src="./images/EMDSHome.png">
 										<div class="overlay"></div>
 										<div class="link">
@@ -279,7 +279,7 @@
 											<div>
 												<span class="meta">파이널 팀 프로젝트</span>
 												<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';">
-													사내 전자결재 시스템 개발(진행 중 배포X)
+													사내 전자결재 시스템 개발
 													<span>2023-08-01 ~ 2023-09-15</span>
 												</h3>
 											</div>
@@ -289,7 +289,7 @@
 											<table class="table">
 												<tr>
 													<th>프로젝트 개요</th>
-													<th>개발내용</th>
+													<th>배운 점</th>
 												</tr>
 												<tr>
 													<td><!-- 프로젝트 개요 -->
@@ -302,15 +302,14 @@
 														
 													</td>
 													
-													<td><!-- 개발내용 -->
-														<strong>결재 관리:</strong> 새 결재를 통해 양식에 맞춰 기안을 올릴 수 있고, 결재 라인에 본인이 포함되면 알림을 받습니다. 사인을 그려 등록할 수 있고 이 사인으로 결재란에 서명합니다.<br>
-														<strong>기안 및 결재 조회:</strong> 자신이 올린 기안이나 자신이 결재라인에 포함 된 기안을 볼 수 있습니다.<br>
-														<strong>일정 관리:</strong> 관리자는 일정을 등록할 수 있고, 다른 사원들은 일정을 달력과 리스트로 확인 가능합니다. <br>
-														<strong>다기능 캘린더:</strong> 캘린더에서는 공용품 정보와 회사 일정을 모두 확인 가능합니다. 달력에서 예약 정보와 회사일정 중 원하는 정보만 선택 조회 가능합니다. <br>
-														<strong>권한 관리:</strong> 관리자는 세분화 된 권한을 가지고 각 권한별로 일정,공용품,인사,휴가 등을 관리합니다. <br>
-														<strong>회원 관리:</strong> 관리자가 사원 번호를 생성하고 이 사원번호를 메일로 발송해 회원가입 링크를 줄 수 있습니다. 관리자가 사원의 인사정보를 각각, 또는 엑셀로 대량으로 등록할 수 있습니다.<br>
-														<strong>게시판 및 API 활용:</strong> 게시판 관리와 사용이 가능하고, HOME에서는 공공기관 API를 이용하여 주변의 돌발상황이나 봉사활동 지도, 매출현황 차트를 볼 수 있습니다.<br>
-														<strong>실시간 채팅:</strong> 웹소켓을 통한 간단한 전체 채팅 기능이 있습니다.<br>
+													<td><!-- 배운 점 -->
+														본격적으로 스프링의 기능들을 활용하고, MVC 패턴과 서비스 레이어, preHandler 등을 써볼 수 있어 즐거웠습니다.
+														소켓에 대한 지식이 전혀 없는 상황에서 그저 기능을 구현하고 싶은 마음에 뛰어들었던 웹소켓과 STOMP헤더를 활용한 채팅 구현은 어렵지만 보람찼습니다.
+														잘 모르는 상태로 무작정 도전했다가 처음으로 의존성 순환 문제에도 빠져봤고, 그 뒤에 다시 차근차근 공부해서 논리설계를 다시 한 뒤 시작했습니다.
+														
+														기존에는 서버단은 서버단에서만 디버깅하고 다 잘 되는걸 확인한 뒤 뷰에 뿌려주는 식으로 개발을 해왔습니다.
+														하지만 웹소켓은 3 Way HandShake 이후에는 계속 연결된 상황이기에 클라이언트 디버깅과 서버 디버깅을 동시에 처리하는 점이 헷갈렸습니다.
+														그래도 배포까지 한 후에 팀원들과 함께 채팅창에 접속해 이야기 했던 순간은 오래도록 기억에 남을거 같습니다.	
 													</td>
 												</tr>
 												<tr>
@@ -327,6 +326,7 @@
 																	</li>	
 																	<li><span class="s-title">스프링 인터셉터 로그인 처리</span>
 																		<div>- 스프링 인터셉터를 통해 로그인하지 않은 사용자의 접근을 preHandle로 제어</div>
+																		<div>- 404 페이지를 만들어 잘못된 경로로 접근시 home으로 리다이렉트 </div>
 																	</li>
 																	<li><span class="s-title">쿠키 사용하여 입력 정보 저장</span>
 																		<div>- ID 저장 버튼 체크시, 일정기간동안 입력된 로그인 정보를 쿠키에 저장하여 다음부터는 미리 출력</div>
@@ -338,14 +338,12 @@
 																	<li><span class="s-title">웹소켓을 활용한 채팅</span>
 																		<div>- 웹소켓을 활용하여 여러 사용자들이 소켓 통신을 통한 채팅</div>
 																		<div>- HTTP 세션 ID를 웹소켓 UserID로 받아와 회원가입 아이디와 동일한 아이디로 채팅</div>
+																		<div>- STOMP에서 메시지를 구독할 때에도 ID를 함께 전송합니다.</div>
+																		<div>- UserService 클래스에 userList를 만들어 싱글톤으로 관리합니다. 세션 접속시 유저 리스트를 가감해주며 접속시 리스트를 푸시합니다. </div>
+																		<div>-  </div>
 																	</li>
-																	<li><span class="s-title">서브 타이틀</span>
-																		<div>- 상세 설명</div>
-																		<div>- 상세설명</div>
-																	</li>
-																	<li><span class="s-title">서브 타이틀</span>
-																		<div>- 상세 설명</div>
-																		<div>- 상세설명</div>
+																	<li><span class="s-title">결재 라인에 본인이 등록시 푸시 알림</span>
+																		<div>- 웹소켓 세션 접속시 항상 ID 값을 가지게 하여 접속시 알림을 받습니다.</div>
 																	</li>
 																</ul>
 															</li>
@@ -606,8 +604,8 @@
 
 <!---------------------Ect  ------------------------------->
 <div class="item">
-    <div class="col-md-12">
-        <div class="article">
+	<div class="col-md-12">
+		<div class="article" id="p4">
             <a href="http://15.164.19.8/userboard/home.jsp" target="_blank">
                 <img class="img-responsive" src="./images/userboardMain.png">
                 <div class="link">
