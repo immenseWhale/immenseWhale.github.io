@@ -115,6 +115,12 @@
 			font-size: 17px;
 			color: rgb(45, 105, 125);
 		}
+		
+	.disabled-link {
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    
 	</style>
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -130,10 +136,9 @@
 				<div class="row row-padded-bottom">
 					<div class="col-md-5 animate-box">
 						<div class="row">
-<!-- 							<div class="col-md-5">
+							<div class="col-md-5">
 								<img class="img-responsive about-img" src="./images/202306BGWite.jpg" style="margin-top: 80px;" >
 							</div> 
--->
 							<div class="col-md-6">
 								<div class="about-desc">
 										
@@ -158,7 +163,7 @@
 						<div class="services animate-box" style="margin-bottom :10px;">
 										안녕하세요 매일을 기록하는 개발자 장우정입니다. 
 										날마다 기록하며 그날의 배움을 돌아보고 3일 뒤, 7일 뒤에 또다시 돌아보며 지속적으로 발전하고 있습니다. <br>
-	 									스무 살에 멀티미디어를 배우며 개발에 흥미를 느꼈지만, 일신의 사정으로 학업을 이어 나갈 수 없었습니다. 
+	 									스무 살에 멀티미디어과에서 C언어와 DB, CS를 배우며 개발에 흥미를 느꼈습니다.
 	 									국비 교육과정에서 자바 프레임워크 기반의 프로젝트 과정을 통해 개발자가 될 기회를 얻은 데에 감사합니다. 
 										<br>
 						</div>
@@ -203,26 +208,30 @@
 									<div class="col-md-3">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
 											<h3 style="font-size: 25px;">Backend</h3>
-											<span>java</span>
+											<span>Java</span>
 											<span>JavaScript</span>
 											<span>Spring Boot</span>
-											<span>REST API</span>
-											<span>Maven</span>
+											<span>Spring Security / JWT</span>
+											<span> REST API</span>
+											<span>Gradle / Maven</span>
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
 											<h3 style="font-size: 25px;">DATABASE</h3>
-											<span>Maria DB</span>
+											<span>PostgreSQL</span>
+											<span>Maria DB / MySQL</span>
 											<span>Oracle</span>
 											<span>MyBatis</span>
 										</div>
 									</div>
 									<div class="col-md-3">
 										<div class="col-md-12 col-md-offset-0 animate-box intro-heading">
-											<h3 style="font-size: 25px;">CI/CD</h3>
-											<span>AWS</span>
-											<span>Docker</span>											
+											<h3 style="font-size: 25px;">Infra</h3>
+											<span>Linux Server</span>
+											<span>Putty/AWS/Docker</span>	
+											<span>Shell Script</span>
+											<span>FFmpeg</span>
 										</div>
 									</div>
 									
@@ -231,8 +240,9 @@
 											<h3 style="font-size: 25px;">TOOL</h3>
 											<span>Spring Tool Suite</span>
 											<span>Eclipse</span>
-											<span>Github</span>
-											<span>HeidiSQL</span>
+											<span>Github/Sourcetree</span>
+											<span>HeidiSQL/DBeaver</span>
+											<span>putty</span>
 										</div>
 									</div>
 								</div>
@@ -283,7 +293,7 @@
 						<div class="item">
 							<div class="col-md-12">
 								<div class="article" id="p1">
-									<a href="http://15.164.19.8/login" target="_blank" class="blog-img">
+									<a href="http://13.124.177.190/login" target="_blank" class="blog-img">
 										<img class="img-responsive" src="./images/EMDSHome.png">
 										<div class="overlay"></div>
 										<div class="link">
@@ -310,7 +320,7 @@
 												</tr>
 												<tr>
 													<td><!-- 프로젝트 개요 -->
-														제목 : 전자결재(Spring MVC) - 배포만료<br>
+														제목 : 전자결재(Spring MVC) - 배포 중<br>
 														기간 : 2023-08-01 ~ 2023-09-15<br>
 														인원 : 5명<br>
 														역할 : 팀장 / 웹소켓을 활용한 채팅과 알림<br>
@@ -397,7 +407,7 @@
 						<div class="item">
 							<div class="col-md-12">
 								<div class="article" id="p3">
-									<a href="http://15.164.19.8/cash/login" target="_blank" class="blog-img">
+									<a href="http://15.164.19.8/cash/login" target="_blank" class="blog-img disabled-link">
 										<img class="img-responsive" src="./images/cashMain.png">
 										<div class="overlay"></div>
 										<div class="link">
@@ -512,7 +522,7 @@
 						<div class="item">
 							<div class="col-md-12">
 								<div class="article" id="p2">
-									<a href="http://15.164.19.8/lightingShop/home.jsp" target="_blank" class="blog-img">
+									<a href="http://13.124.177.190/lightingShop/home.jsp" target="_blank" class="blog-img">
 										<img class="img-responsive" src="./images/lightingShopMain.png">
 										<div class="overlay"></div>
 										<div class="link">
@@ -524,7 +534,7 @@
 											<div>
 												<span class="meta">세미 팀 프로젝트</span>
 												<h3 style="font-size: 35px; font-family:'Pretendard-SemiBold';">
-													조명가게 쇼핑몰 - 배포 만료
+													조명가게 쇼핑몰 - 배포 중
 													<span>2023-05-30 ~ 2023-06-23</span>
 												</h3>
 											</div>
@@ -625,7 +635,7 @@
 <div class="item">
 	<div class="col-md-12">
 		<div class="article" id="p4">
-            <a href="http://15.164.19.8/userboard/home.jsp" target="_blank">
+            <a href="http://15.164.19.8/userboard/home.jsp" class="blog-img disabled-link">
                 <img class="img-responsive" src="./images/userboardMain.png">
                 <div class="link">
                     <span class="read">Go to Project</span>
@@ -647,7 +657,7 @@
 <div class="item">
     <div class="col-md-12">
         <div class="article">
-            <a href="http://15.164.19.8/diary/scheduleList.jsp" target="_blank">
+            <a href="http://15.164.19.8/diary/scheduleList.jsp" class="blog-img disabled-link">
                 <img class="img-responsive" src="./images/diaryMain.png">
                 <div class="link">
                     <span class="read">Go to Project</span>
